@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import App from './src/App';
-import SimpleApp from './src/config/Router';
+//import SimpleApp from './src/config/Router';
 
 
 
-AppRegistry.registerComponent('navigator', () => SimpleApp);
+AppRegistry.registerComponent('navigator', () => App);

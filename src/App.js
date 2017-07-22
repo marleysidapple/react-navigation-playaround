@@ -2,19 +2,23 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet} from 'react-native';
 import { Button, Icon } from 'react-native-elements';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import promise from 'redux-promise';
+import reducers from './reducers';
+import Router from './config/Router';
 
+
+const store = applyMiddleware(thunk, promise)(createStore);
 
 class App extends Component {
   render() {
 
     return(
-      <View style={styles.mainContainer}>
-          <Text>Hello i have added new ones</Text>
-          <Button
-           onPress={() => this.props.navigation.navigate('SecondScreen')}
-           title="Go to Second Screen"
-           />
-      </View>
+      <Provider store={store(reducers)}>
+      		<Router />
+      	</Provider>
     );
   }
 }

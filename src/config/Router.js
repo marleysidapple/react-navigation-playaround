@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StackNavigator, TabNavigator }  from 'react-navigation';
 import SecondScreen  from './../screens/SecondScreen';
 import HomeScreen  from './../screens/HomeScreen';
@@ -24,8 +24,7 @@ const Tabs = TabNavigator({
   },
 });
 
-
-const SimpleApp = StackNavigator({
+const Router = StackNavigator({
   Home: { screen: HomeScreen },
   SecondScreen: {screen: Tabs}
 },
@@ -35,4 +34,4 @@ const SimpleApp = StackNavigator({
 
 
 
-export default SimpleApp;
+export default Router;
