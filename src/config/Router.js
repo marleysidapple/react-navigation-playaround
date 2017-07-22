@@ -1,23 +1,26 @@
+import React from 'react';
 import { StackNavigator, TabNavigator }  from 'react-navigation';
 import SecondScreen  from './../screens/SecondScreen';
 import HomeScreen  from './../screens/HomeScreen';
+import Tabone from './../screens/Tabone';
+import Tabtwo from './../screens/Tabtwo';
 import { Icon } from 'react-native-elements';
 
 
 const Tabs = TabNavigator({
-  Home: {
-    screen: HomeScreen,
-    // navigationOptions: {
-    //   tabBarLabel: 'Feed',
-    //   tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />,
-    // },
+  Tabone: {
+    screen: Tabone,
+    navigationOptions: {
+      tabBarLabel: 'Tabone',
+      tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />,
+    },
   },
-  SecondScreen: {
-    screen: SecondScreen,
-    // navigationOptions: {
-    //   tabBarLabel: 'Me',
-    //   tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
-    // },
+  Tabtwo: {
+    screen: Tabtwo,
+    navigationOptions: {
+      tabBarLabel: 'Tabtwo',
+      tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
+    },
   },
 });
 

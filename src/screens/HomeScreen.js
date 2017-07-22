@@ -17,7 +17,7 @@ class HomeScreen extends Component {
 }
 
 HomeScreen.navigationOptions = {
-  title: 'Home Screen Title',
+  title: 'yo man',
   header: null
 };
 
